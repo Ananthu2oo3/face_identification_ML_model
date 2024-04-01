@@ -23,22 +23,26 @@ def w2d(img, mode='haar', level=1):
 
 
 def stack(img):
+    normal_scal = cv2.resize(img, (32, 32))
+
+    discret_img = w2d(img, 'db1', 5)
+    discret_img = cv2.cvtColor(discret_img, cv2.COLOR_RGBA2RGB) if discret_img.shape[2] == 4 else discret_img[:, :, :3]
+
+    discret_scal = cv2.resize(discret_img, (32, 32))
     
-    normal_img      = cv2.imread(img)
-    normal_scal     = cv2.resize(normal_img, (32, 32))  
+    # Flatten arrays before stacking
+    normal_scal_flat = normal_scal.flatten()
+    discret_scal_flat = discret_scal.flatten()
     
-    discret_img     = w2d(normal_img, 'db1', 5)  
-    discret_img     = cv2.cvtColor(discret_img, cv2.COLOR_RGBA2RGB) if discret_img.shape[2] == 4 else discret_img[:, :, :3]  
-    
-    discret_scal    = cv2.resize(discret_img, (32, 32))
-    combined_img    = np.vstack((normal_scal.reshape(32*32*3, 1), discret_scal.reshape(32*32*3, 1)))
+    combined_img = np.hstack((normal_scal_flat, discret_scal_flat))
 
     return combined_img
 
 
 def predict(img):
+    # Assuming img is a numpy array
+    with open('model.pkl', 'rb') as file:
+        model = pickle.load(file)
 
-    with open('model.pkl', 'rb') as file:  
-        model   = pickle.load(file)
-        predict = model.predict(img)
-        return predict
+    prediction = model.predict(img.reshape(1, -1))  
+    return prediction
