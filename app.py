@@ -39,9 +39,9 @@ def uploaded_file(filename):
     if img is None:
         return "Error: Image not found or could not be opened."
 
-    dwt = w2d(img)
-    x = stack(dwt)
-    y = predict(x)
+    cropped = haar_cascade(img)
+    input   = stack(cropped)
+    y       = predict(input)
 
     if y == 0:
         output = "scarlett_johansson.jpg"
@@ -54,7 +54,7 @@ def uploaded_file(filename):
     elif y == 4:
         output = "chris_hemsworth.jpg"
 
-    return render_template('display_image.html', filename=output)
+    return render_template('display_image.html', filename=output, num = y)
 
 if __name__ == '__main__':
     app.run(debug=True)
