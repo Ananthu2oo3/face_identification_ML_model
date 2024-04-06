@@ -59,5 +59,8 @@ def predict(img):
         
     loaded_model = joblib.load('model.pkl')
 
-    predictions = loaded_model.predict(img.reshape(1, -1))  
-    return predictions
+    predictions = loaded_model.predict(img.reshape(1, -1))
+    probability = loaded_model.predict_proba(img.reshape(1, -1))
+    
+    
+    return probability[0]

@@ -41,7 +41,19 @@ def uploaded_file(filename):
 
     cropped = haar_cascade(img)
     input   = stack(cropped)
-    y       = predict(input)
+    outputs  = predict(input)
+
+    # y    = output["predictions"]
+    # prob = output["probabilities"]
+
+    y   = 0
+    max = 0
+
+    for i in range(len(outputs)):
+        
+        if(outputs[i] > max):
+            y = i
+            max = outputs[i]
 
     if y == 0:
         output = "scarlett_johansson.jpg"
@@ -54,7 +66,7 @@ def uploaded_file(filename):
     elif y == 4:
         output = "chris_hemsworth.jpg"
 
-    return render_template('display_image.html', filename=output, num = y)
+    return render_template('display_image.html', filename=output, num = y, prob = outputs)
 
 if __name__ == '__main__':
     app.run(debug=True)

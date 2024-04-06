@@ -7,5 +7,32 @@
     <h2>Uploaded Image</h2>
     <p>{{ filename }}</p>
     <img src="/static/uploads/{{ filename }}" alt="Uploaded Image">
+    
+    <table>
+        <tr>
+            <th>Character</th>
+            <th>Similarity</th>
+        </tr>
+        <tr>
+            <td>Scarlett Johansson</td>
+            <td>{{ prob[0] }}</td>
+        </tr>
+        <tr>
+            <td>Mark Ruffalo</td>
+            <td>{{ prob[1] }}</td>
+        </tr>
+        <tr>
+            <td>RDJ</td>
+            <td>{{ prob[2] }}</td>
+        </tr>
+        <tr>
+            <td>Chris Evans</td>
+            <td>{{ prob[3] }}</td>
+        </tr>
+        <tr>
+            <td>Chris Hemsworth</td>
+            <td>{{ prob[4] }}</td>
+        </tr>
+    </table>
 </body>
 </html>
