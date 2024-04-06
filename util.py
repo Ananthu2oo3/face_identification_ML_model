@@ -11,7 +11,6 @@ def haar_cascade(img):
     faces = face_cascade.detectMultiScale(img,1.3,5)
     
     (x,y,w,h) = faces[0]
-    # face_img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
     face_img = cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
     roi_color = face_img[y:y+h,x:x+w]
 
@@ -46,7 +45,6 @@ def stack(img):
 
     discret_scal = cv2.resize(discret_img, (32, 32))
     
-    # Flatten arrays before stacking
     normal_scal_flat = normal_scal.flatten()
     discret_scal_flat = discret_scal.flatten()
     

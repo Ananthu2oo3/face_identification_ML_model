@@ -4,7 +4,11 @@ import os
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads'
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+for root, dirs, files in os.walk(UPLOAD_FOLDER, topdown=False):
+    for file in files:
+        os.remove(os.path.join(root, file))
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
