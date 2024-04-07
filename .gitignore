@@ -1,6 +1,3 @@
 /__pycache__/
-images/
 data/
-*.png
-*.jpg
-*.jpeg
+upload/
