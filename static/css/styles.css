@@ -1,5 +1,29 @@
-body {
-  background-image: url('/home/ananthu/machine_learning/face_identification_ML_model/assets/bg1.jpg');
-  background-size: cover; 
-  background-position: center; 
+.container {
+  width: 100%;
+  height: 200%;
+  overflow-y: scroll;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Half the container height to fit two images */
+  background-size: cover;
+}
+
+.image1 {
+  background-image: url('../images/bg1.jpg'); /* Replace 'image1.jpg' with your image path */
+  
+}
+
+.image2 {
+  background-image: url('../images/bg2.jpg'); /* Replace 'image2.jpg' with your image path */
+  top: 100%; /* Position the second image below the first one */
+}
+
+.content {
+  position: absolute; /* Added */
+  z-index: 1; /* Ensure content appears above background images */
 }

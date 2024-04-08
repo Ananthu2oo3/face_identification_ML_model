@@ -61,23 +61,23 @@ def uploaded_file(filename):
 
     if y == 0:
         output = "scarlett_johansson.jpg"
-        return render_template('display_image.html', filename=output, num = y, prob = outputs)
+        return render_template('scarlett_johansson.html', filename=output, num = y, prob = outputs)
     
     elif y == 1:
         output = "mark_ruffalo.jpg"
-        return render_template('display_image.html', filename=output, num = y, prob = outputs)
+        return render_template('mark_ruffalo.html', filename=output, num = y, prob = outputs)
     
     elif y == 2:
         output = "robert_downey_jr.jpg"
-        return render_template('display_image.html', filename=output, num = y, prob = outputs)
+        return render_template('rdj.html', filename=output, num = y, prob = outputs)
     
     elif y == 3:
         output = "chris_evans.jpg"
-        return render_template('display_image.html', filename=output, num = y, prob = outputs)
+        return render_template('chris_evans.html', filename=output, num = y, prob = outputs)
     
     elif y == 4:
         output = "chris_hemsworth.jpg"
-        return render_template('display_image.html', filename=output, num = y, prob = outputs)
+        return render_template('chris_hemsworth.html', filename=output, num = y, prob = outputs)
 
    
 if __name__ == '__main__':

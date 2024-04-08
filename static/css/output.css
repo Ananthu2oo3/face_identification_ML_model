@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Font1';
+    src: url('../fonts/Aldrich/Aldrich-Regular.ttf') format('truetype');
+    /* Define other font properties */
+  }
+
+html, body {
+    background: linear-gradient(180deg, #04030B, #060412, #180F2E);
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    color: #B2B7B5; /* Set default text color */
+}
+
+.title_name {
+    color: linear-gradient(0deg, #323433 -20.2%, #B2B7B5 100%);
+    font-family: Font1;
+}
+
+.title_name .first_name{
+    position: absolute;
+    left: 10%;
+    top: 45%;
+    font-size: 120px;
+}
+
+.title_name .last_name{
+    position: absolute;
+    left: 10%;
+    top: 52%;
+    font-size: 160px;
+}
+
+.table_content{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    font-size: 30px;
+    font-family: Font1;
+    color: linear-gradient(0deg, #323433 -20.2%, #B2B7B5 100%);
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+td{ 
+    padding-right: 50px; 
+    padding-bottom: 5px;
+}
+
+th{
+    padding-right: 50px; 
+    padding-bottom: 5px;
+    font-size: 35px;    
+}
+
+.fullscreen-bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fullscreen-bg img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box {
+    position: absolute;
+    border-radius: 0 50px 0 50px;
+    background: #231048;
+    top:18.5%;
+    left:9%;
+    margin-bottom: 29px;
+    padding: 21px 45.8px 13px 43px;
+    width: 520px;
+    height:20px;
+  }

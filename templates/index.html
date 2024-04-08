@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avengers</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="background-image image1"></div>
+        <div class="background-image image2"></div>
+    </div>
+
+    <div class="content">
     <h2>Upload an Image</h2>
+    
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file">
         <input type="submit" value="Upload">
     </form>
+</div>
+
 </body>
 </html>
