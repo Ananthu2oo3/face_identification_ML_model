@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Font1';
+  src: url('../fonts/Aldrich/Aldrich-Regular.ttf') format('truetype');
+  /* Define other font properties */
+}
+
 .container {
   width: 100%;
   height: 200%;
@@ -26,4 +32,171 @@
 .content {
   position: absolute; /* Added */
   z-index: 1; /* Ensure content appears above background images */
+}
+
+.rectangle{
+  position: absolute;
+  top:300px;
+  left:400px;
+  width: 1200px; 
+  height: 400px; 
+  border-radius: 250px 0 0 250px;
+  background: linear-gradient(90.05deg, #000000 -1%, rgba(0, 0, 0, 0.32) 99.2%); /* Adjust color as needed */
+}
+
+.avg_images{
+  position: absolute;
+  height: 800px;
+  top:100px;
+  left:480px;
+}
+
+/* .subtitle{
+  position: absolute;
+  top:530px;
+  left:750px;
+  width:700px;
+  font-family: Font1;
+  font-size: 50px;
+  color: linear-gradient(0deg, #323433 -20.2%, #B2B7B5 100%);
+} */
+
+.subtitle {
+  position: absolute;
+  top: 540px;
+  left: 750px;
+  width: 700px;
+  font-family: Font1;
+  font-size: 45px;
+  /* Apply gradient as background */
+  background: linear-gradient(0deg, #323433 -20.2%, #B2B7B5 100%);
+  /* Set background-clip to text so gradient is applied only to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set text fill color to transparent so the gradient shows through */
+  color: transparent;
+}
+
+.cardContainer {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  top: 1250px;
+  left: 500px;
+  width: 800px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 50px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(65, 65, 65, 0.308);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  cursor: pointer;
+}
+
+.discription{
+  position: relative;
+  top:25px;
+  right:90px;
+  width:500px;
+  color: white;
+  font-size: 30px;
+}
+
+.input-div {
+  position: relative;
+  width: 85px;
+  height: 105px;
+  bottom:200px;
+  left:35%;
+  border-radius: 50%;
+  border: solid rgb(1, 235, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  animation: flicker 2s linear infinite;
+}
+
+.icon {
+  color: rgb(1, 235, 252);
+  font-size: 2rem;
+  cursor: pointer;
+  animation: iconflicker 2s linear infinite;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+}
+
+@keyframes flicker {
+  0% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  5% {
+    border: none;
+    box-shadow: none;
+  }
+
+  10% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  25% {
+    border: none;
+    box-shadow: none;
+  }
+
+  30% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+
+  100% {
+    border: 2px solid rgb(1, 235, 252);
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  }
+}
+
+@keyframes iconflicker {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 0.2;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

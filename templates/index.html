@@ -13,13 +13,27 @@
     </div>
 
     <div class="content">
-    <h2>Upload an Image</h2>
+        <div class="rectangle"></div>
+        <img class="avg_images" src="../static/images/avengers.png">
+        <p class="subtitle" >Face Detection Model</p>
     
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-    </form>
-</div>
+        <div class="cardContainer">
+            <div class="card">
+                <p class="discription">This machine learning model analyzes images to accurately identify the actor depicted. Simply upload a picture featuring one of the actors in the background and click submit to receive the prediction.</p>
+                
+                <div class="input-div">
+                    <input class="input" name="file" type="file">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                </div>
+                
+                <!-- <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file">
+                    <input type="submit" value="Upload">
+                </form> -->
+        
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
