@@ -7,33 +7,60 @@
     <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
+    
     <div class="container">
         <div class="background-image image1"></div>
         <div class="background-image image2"></div>
     </div>
 
+
     <div class="content">
+        <img src="../static/images/marvel.png" class="marvel">
+        
+        <a href="https://www.linkedin.com/in/ananthu-g/">
+            <img src="../static/images/linkedin.png" class = "linkedin">
+        </a>
+
+        <a href="https://github.com/Ananthu2oo3">
+            <img src="../static/images/github.png" class = "github">
+        </a>
+
+        <a href="https://www.medium.com/@ananthug.2003">
+            <img src="../static/images/medium.png" class = "medium">
+        </a>
+
         <div class="rectangle"></div>
         <img class="avg_images" src="../static/images/avengers.png">
         <p class="subtitle" >Face Detection Model</p>
-    
-        <div class="cardContainer">
+
+        <p class="try"> &#9660; Try it out &#9660;</p>        
+        
+        <div id="cardContainer" class="cardContainer">
             <div class="card">
-                <p class="discription">This machine learning model analyzes images to accurately identify the actor depicted. Simply upload a picture featuring one of the actors in the background and click submit to receive the prediction.</p>
-                
-                <div class="input-div">
+                <p class="discription">This machine learning model analyzes images to accurately identify the actor depicted in the background. 
+                    <br><br>Simply upload a picture featuring one of the actors in the background and click submit to receive the prediction.</p>
+
+                <form action="/upload" method="post" enctype="multipart/form-data" class="input-div">                
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon">
+                        <polyline points="16 16 12 12 8 16"></polyline>
+                        <line y2="21" x2="12" y1="12" x1="12"></line>
+                        <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                        <polyline points="16 16 12 12 8 16"></polyline>
+                    </svg>
+
                     <input class="input" name="file" type="file">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
-                </div>
-                
-                <!-- <form action="/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" name="file">
-                    <input type="submit" value="Upload">
-                </form> -->
+                    
+                    <button type="submit" class="button">
+                        <span class="button-content">Submit </span>
+                    </button>
+
+                </form>
         
             </div>
         </div>
     </div>
 
+    <script src="../static/js/script.js"></script>
 </body>
 </html>

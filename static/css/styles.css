@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Font1';
-  src: url('../fonts/Aldrich/Aldrich-Regular.ttf') format('truetype');
+  src: url('../fonts/Aldrich-Regular.ttf') format('truetype');
   /* Define other font properties */
 }
 
@@ -33,6 +33,35 @@
   position: absolute; /* Added */
   z-index: 1; /* Ensure content appears above background images */
 }
+
+.marvel{
+  position: absolute;
+  height:80px;
+  top:25px;
+  left: 1600px;
+}
+
+.linkedin{
+  position: absolute;
+  top: 15px;
+  left : 15px;
+  height:30px;
+}
+
+.github{
+  position: absolute;
+  top: 65px;
+  left : 15px;
+  height:30px;
+}
+
+.medium{
+  position: absolute;
+  top: 110px;
+  left : 15px;
+  height:30px;
+}
+
 
 .rectangle{
   position: absolute;
@@ -77,6 +106,20 @@
   color: transparent;
 }
 
+.try{
+  position: absolute;
+  top: 850px;
+  left: 900px;
+  width:200px;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: 'Font1';
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .cardContainer {
   width: fit-content;
   position: relative;
@@ -113,23 +156,23 @@
 }
 
 .input-div {
-  position: relative;
-  width: 85px;
-  height: 105px;
-  bottom:200px;
-  left:35%;
+  position: absolute;
+  width: 150px; /* Equal width and height */
+  height: 150px; /* Equal width and height */
+  bottom: 150px;
+  left: 75%;
   border-radius: 50%;
-  border: solid rgb(1, 235, 252);
+  border: solid rgb(35,16,72);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 100px rgb(35,16,72), inset 0px 0px 10px rgb(115, 91, 164), 0px 0px 5px rgb(255, 255, 255);
   animation: flicker 2s linear infinite;
 }
 
 .icon {
-  color: rgb(1, 235, 252);
+  position: absolute;
+  color: rgb(255,255,255);
   font-size: 2rem;
   cursor: pointer;
   animation: iconflicker 2s linear infinite;
@@ -145,8 +188,8 @@
 
 @keyframes flicker {
   0% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid rgb(115, 91, 164);
+    box-shadow: 0px 0px 100px rgb(115, 91, 164), inset 0px 0px 10px rgb(115, 91, 164), 0px 0px 5px rgb(255, 255, 255);
   }
 
   5% {
@@ -155,8 +198,8 @@
   }
 
   10% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid rgb(115, 91, 164);
+    box-shadow: 0px 0px 100px rgb(115, 91, 164), inset 0px 0px 10px rgb(115, 91, 164), 0px 0px 5px rgb(255, 255, 255);
   }
 
   25% {
@@ -165,13 +208,13 @@
   }
 
   30% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid rgb(115, 91, 164);
+    box-shadow: 0px 0px 100px rgb(115, 91, 164), inset 0px 0px 10px rgb(115, 91, 164), 0px 0px 5px rgb(255, 255, 255);
   }
 
   100% {
-    border: 2px solid rgb(1, 235, 252);
-    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    border: 2px solid rgb(115, 91, 164);
+    box-shadow: 0px 0px 100px rgb(115, 91, 164), inset 0px 0px 10px rgb(115, 91, 164), 0px 0px 5px rgb(255, 255, 255);
   }
 }
 
@@ -200,3 +243,51 @@
     opacity: 1;
   }
 }
+
+.button {
+  position: absolute;
+  top:180px;
+  overflow: hidden;
+  height: 3rem;
+  width: 10rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #4f4879;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  font-family: 'Font1';
+  font-weight: 1000;
+  font-size: 20px;;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+
+
